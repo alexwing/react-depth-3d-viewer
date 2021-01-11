@@ -4,13 +4,12 @@ Pseudo 3D photo viewer from a depth layer for React using pixi.js
 
 ![react-depth-3d-viewer](http://mappuzzle.xyz/depth3dviewer/demoimage.jpg)
 
-Test in http://mappuzzle.xyz/depth3dviewer
+Test in http://mappuzzle.xyz/depth3dviewer/
 
 ## Requirements 
 
 * @inlet/react-pixi
 * pixi.js
-* 
 
 
 ## TO-DO
