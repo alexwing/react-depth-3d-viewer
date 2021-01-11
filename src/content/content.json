@@ -1,0 +1,60 @@
+{
+  "images": [
+    {
+      "id": 0,
+      "name": "Test 01",
+      "comment": "Test 01",
+      "url": "test_01",
+      "image": "./images/test01.jpg",
+      "depthImage": "./images/test01_depth.jpg"     
+    },
+    {
+      "id": 1,
+      "name": "Test 02",
+      "comment": "Test 02",
+      "url": "test_02",
+      "image": "./images/test02.jpg",
+      "depthImage": "./images/test02_depth.jpg"     
+    },
+    {
+      "id": 2,
+      "name": "Test 03",
+      "comment": "Test 03",
+      "url": "test_03",
+      "image": "./images/test03.jpg",
+      "depthImage": "./images/test03_depth.jpg"     
+    },
+    {
+      "id": 3,
+      "name": "Test 04",
+      "comment": "Test 04",
+      "url": "test_04",
+      "image": "./images/test04.jpg",
+      "depthImage": "./images/test04_depth.jpg"     
+    },
+    {
+      "id": 4,
+      "name": "Test 05",
+      "comment": "Test 05",
+      "url": "test_05",
+      "image": "./images/test05.jpg",
+      "depthImage": "./images/test05_depth.jpg"     
+    },
+    {
+      "id": 5,
+      "name": "Test 06",
+      "comment": "Test 06",
+      "url": "test_06",
+      "image": "./images/test06.jpg",
+      "depthImage": "./images/test06_depth.jpg"     
+    },
+    {
+      "id": 6,
+      "name": "Test 07",
+      "comment": "Test 07",
+      "url": "test_07",
+      "image": "./images/test07.jpg",
+      "depthImage": "./images/test07_depth.jpg"     
+    }
+  ]
+}
