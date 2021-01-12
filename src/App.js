@@ -13,8 +13,8 @@ class Main extends Component {
       puzzleSelected: 0,     
       image: "./images/test01.jpg",     
       depthImage: "./images/test01_depth.jpg",
-      width: window.screen.width,
-      height: window.screen.height     
+      width: window.innerWidth,
+      height: window.innerHeight     
     };
   }
   onSelectImageHandler = (val) => {
@@ -26,12 +26,17 @@ class Main extends Component {
     
     }
   }
+
+
   componentDidMount() {
       window.addEventListener("resize", this.resizeCanvas.bind(this));
   }
+
+
   resizeCanvas() {
-    this.setState({ width:  window.screen.width , height:  window.screen.height });
+    this.setState({ width: window.innerWidth , height: window.innerHeight});
   }
+
 
   render() {
     return (
