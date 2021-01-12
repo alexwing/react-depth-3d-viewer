@@ -22,6 +22,7 @@ Test in http://mappuzzle.xyz/depth3dviewer/
 * Mobile touch events
 * Scroll Mode similar to Facebook wall
 * Auto circular move mode
+* Loader icon
   
 
 

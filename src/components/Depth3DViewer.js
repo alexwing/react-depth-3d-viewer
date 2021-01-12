@@ -15,7 +15,6 @@ export default class Depth3DViewer extends Component {
                 const { image, depthImage, x, y, width, height } = props;
                 let imageTexture = new BaseTexture(image);
                 let depthImageTexture = new BaseTexture(depthImage);
-
                 //loaders
                 if (imageTexture.valid) {
                     CreateDepth3D(instance, imageTexture, depthImageTexture, x, y, width, height);
@@ -66,7 +65,7 @@ export default class Depth3DViewer extends Component {
         }
 
         function FitToScreen(width, height) {
-            console.log(AspectRatio(img.width, img.height) + "- " + AspectRatio(width, height));
+            console.log(AspectRatio(img.width, img.height) + "- " + AspectRatio(width, height) + " - "+ window.devicePixelRatio);
             if (AspectRatio(width, height) >= AspectRatio(img.width, img.height)) {
                 //console.log("Horizontal");
                 //fit to canvas height
@@ -97,7 +96,7 @@ export default class Depth3DViewer extends Component {
             }
         }
 
-        return <Stage width={this.props.width} height={this.props.height} >
+        return <Stage width={this.props.width} height={this.props.height}  options={{ resolution:  1 }} >
             <Depth3D image={this.props.image} depthImage={this.props.depthImage} x={this.props.x ? this.props.x : 0} y={this.props.y ? this.props.y : 0} width={this.props.width} height={this.props.height} />
         </Stage>
     }

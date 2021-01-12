@@ -13,8 +13,8 @@ class Main extends Component {
       puzzleSelected: 0,     
       image: "./images/test01.jpg",     
       depthImage: "./images/test01_depth.jpg",
-      width: window.innerWidth,
-      height: window.innerHeight     
+      width: window.screen.width,
+      height: window.screen.height     
     };
   }
   onSelectImageHandler = (val) => {
@@ -30,9 +30,9 @@ class Main extends Component {
       window.addEventListener("resize", this.resizeCanvas.bind(this));
   }
   resizeCanvas() {
-    this.setState({ width: window.innerWidth , height: window.innerHeight});
+    this.setState({ width:  window.screen.width , height:  window.screen.height });
   }
-  
+
   render() {
     return (
       <div>
