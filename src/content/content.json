@@ -55,6 +55,22 @@
       "url": "test_07",
       "image": "./images/test07.jpg",
       "depthImage": "./images/test07_depth.jpg"     
+    },
+    {
+      "id": 7,
+      "name": "Alhambra",
+      "comment": "Alhambra de Granada",
+      "url": "test_08",
+      "image": "./images/test08.jpg",
+      "depthImage": "./images/test08_depth.jpg"     
+    },
+    {
+      "id": 8,
+      "name": "Torre del Oro",
+      "comment": "Torre del Oro (Sevilla)",
+      "url": "test_09",
+      "image": "./images/test09.jpg",
+      "depthImage": "./images/test09_depth.jpg"     
     }
   ]
 }

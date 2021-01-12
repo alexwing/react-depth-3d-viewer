@@ -7,3 +7,9 @@ export function getUrl() {
   //console.log("url: "+url);
   return url;
 }
+
+
+export function AspectRatio(width, height) {
+  let aspectRatioImage = width / height;
+  return aspectRatioImage ? aspectRatioImage : null;
+}

@@ -33,7 +33,7 @@ class Main extends Component {
           content={this.props.content.images}
           onSelectImage={this.onSelectImageHandler}
         />
-        <div style={{  position: "fixed" }}>
+        <div style={{  position: "fixed" , marginTop:"-3.5em"}}>
           <Depth360Viewer image={this.state.image} depthImage={this.state.depthImage} width={window.innerWidth} height={window.innerHeight} />
         </div>
       </div>
