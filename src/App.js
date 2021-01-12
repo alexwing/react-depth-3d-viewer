@@ -12,7 +12,9 @@ class Main extends Component {
     this.state = {
       puzzleSelected: 0,     
       image: "./images/test01.jpg",     
-      depthImage: "./images/test01_depth.jpg",     
+      depthImage: "./images/test01_depth.jpg",
+      width: window.innerWidth,
+      height: window.innerHeight     
     };
   }
   onSelectImageHandler = (val) => {
@@ -24,8 +26,13 @@ class Main extends Component {
     
     }
   }
-
-
+  componentDidMount() {
+      window.addEventListener("resize", this.resizeCanvas.bind(this));
+  }
+  resizeCanvas() {
+    this.setState({ width: window.innerWidth , height: window.innerHeight});
+  }
+  
   render() {
     return (
       <div>
@@ -34,7 +41,7 @@ class Main extends Component {
           onSelectImage={this.onSelectImageHandler}
         />
         <div style={{  position: "fixed" , marginTop:"-3.5em"}}>
-          <Depth360Viewer image={this.state.image} depthImage={this.state.depthImage} width={window.innerWidth} height={window.innerHeight} />
+          <Depth360Viewer image={this.state.image} depthImage={this.state.depthImage} width={this.state.width} height={this.state.height} />
         </div>
       </div>
     );

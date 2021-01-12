@@ -6,7 +6,6 @@ import { AspectRatio } from "./../lib/Utils.js"
 
 
 export default class Depth3DViewer extends Component {
-
     render() {
         var img;
         var depthMap;

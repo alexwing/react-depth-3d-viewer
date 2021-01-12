@@ -15,11 +15,10 @@ Test in http://mappuzzle.xyz/depth3dviewer/
 ## Features
 
 * Respect aspect ratio on autofit image to canvas 
-* 
+* Update on canvas resize
 
 ## TO-DO
 
-* Update on canvas resize
 * Mobile touch events
 * Scroll Mode similar to Facebook wall
 * Auto circular move mode
