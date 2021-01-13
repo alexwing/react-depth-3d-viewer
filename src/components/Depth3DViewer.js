@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import { isMobile } from 'react-device-detect';
 import { Stage, PixiComponent } from '@inlet/react-pixi';
-import { Graphics, Sprite, filters, Texture, BaseTexture } from 'pixi.js';
+import { Graphics, Sprite, filters, Texture, BaseTexture, Rectangle } from 'pixi.js';
 import { AspectRatio } from "./../lib/Utils.js"
 
 
@@ -58,10 +58,17 @@ export default class Depth3DViewer extends Component {
             instance.addChild(img);
             instance.addChild(depthMap);
 
-            window.onmousemove = function (e) {
-                displacementFilter.scale.x = (window.innerWidth / 2 - e.clientX) / 25;
-                displacementFilter.scale.y = (window.innerHeight / 2 - e.clientY) / 25;
-            };
+
+            //img.hitArea = new Rectangle(img.x, img.y, img.width, img.height);
+            img.interactive = true;
+            //img.buttonMode = true;
+            img.on('pointermove', function (e) {
+                displacementFilter.scale.x = (img.width / 2 - e.data.global.x) / 25;
+                displacementFilter.scale.y = (img.height / 2 - e.data.global.y) / 25;
+            });
+
+            
+
         }
 
         function FitToScreen(width, height) {
