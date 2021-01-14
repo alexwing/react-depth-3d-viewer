@@ -8,6 +8,10 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+.navbar.bg-light {
+  background-color: #f8f9faaa !important;
+}
+
 .navbar-brand > img {
   max-height: 32px;
   padding-right: 15px;

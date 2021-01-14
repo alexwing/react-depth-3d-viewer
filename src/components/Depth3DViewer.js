@@ -67,12 +67,12 @@ export default class Depth3DViewer extends Component {
                 displacementFilter.scale.y = (img.height / 2 - e.data.global.y) / 25;
             });
 
-            
+
 
         }
 
         function FitToScreen(width, height) {
-            console.log(AspectRatio(img.width, img.height) + "- " + AspectRatio(width, height) + " - "+ window.devicePixelRatio);
+            console.log(AspectRatio(img.width, img.height) + "- " + AspectRatio(width, height) + " - " + window.devicePixelRatio);
             if (AspectRatio(width, height) >= AspectRatio(img.width, img.height)) {
                 //console.log("Horizontal");
                 //fit to canvas height
@@ -103,7 +103,7 @@ export default class Depth3DViewer extends Component {
             }
         }
 
-        return <Stage width={this.props.width} height={this.props.height}  options={{ resolution:  1 }} >
+        return <Stage width={this.props.width} height={this.props.height} options={{ resolution: 1 , RETINA_PREFIX: `@2x` }} >
             <Depth3D image={this.props.image} depthImage={this.props.depthImage} x={this.props.x ? this.props.x : 0} y={this.props.y ? this.props.y : 0} width={this.props.width} height={this.props.height} />
         </Stage>
     }

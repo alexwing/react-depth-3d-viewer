@@ -2,11 +2,11 @@
   "images": [
     {
       "id": 0,
-      "name": "Test 01",
-      "comment": "Test 01",
-      "url": "test_01",
-      "image": "./images/test01.jpg",
-      "depthImage": "./images/test01_depth.jpg"     
+      "name": "Alhambra",
+      "comment": "Alhambra de Granada",
+      "url": "test_08",
+      "image": "./images/test08.jpg",
+      "depthImage": "./images/test08_depth.jpg"         
     },
     {
       "id": 1,
@@ -58,11 +58,11 @@
     },
     {
       "id": 7,
-      "name": "Alhambra",
-      "comment": "Alhambra de Granada",
-      "url": "test_08",
-      "image": "./images/test08.jpg",
-      "depthImage": "./images/test08_depth.jpg"     
+      "name": "Test 01",
+      "comment": "Test 01",
+      "url": "test_01",
+      "image": "./images/test01.jpg",
+      "depthImage": "./images/test01_depth.jpg"    
     },
     {
       "id": 8,

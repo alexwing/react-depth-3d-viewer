@@ -10,31 +10,51 @@ class Main extends Component {
   constructor() {
     super();
     this.state = {
-      puzzleSelected: 0,     
-      image: "./images/test01.jpg",     
+      puzzleSelected: 0,
+      image: "./images/test01.jpg",
       depthImage: "./images/test01_depth.jpg",
       width: window.innerWidth,
-      height: window.innerHeight     
+      height: window.innerHeight
     };
   }
+  componentDidMount() {
+    window.addEventListener("resize", this.resizeCanvas.bind(this));
+
+    //get url param
+    if (window.location.pathname) {
+      //  console.log(window.location.search.substr(5));
+      let selected = 0;
+      this.props.content.images.forEach(function (value, index) {
+        if (value.url === window.location.search.substr(5)) {
+          //console.log(value.url + "==" + window.location.pathname.substring(1));
+          selected = index;
+        }
+      });
+      this.loadDepthImage(selected);
+    }
+  }
+  loadDepthImage(index) {
+    this.setState({
+      puzzleSelected: index,
+      image: this.props.content.images[index].image,
+      depthImage: this.props.content.images[index].depthImage,
+    });
+  }
+
   onSelectImageHandler = (val) => {
     if (val.target.id) {
-      this.setState({ puzzleSelected: val.target.id , 
-                      image:  this.props.content.images[val.target.id].image,
-                      depthImage:  this.props.content.images[val.target.id].depthImage,
-                    });
-    
+      this.setState({
+        puzzleSelected: val.target.id,
+        image: this.props.content.images[val.target.id].image,
+        depthImage: this.props.content.images[val.target.id].depthImage,
+      });
+
     }
   }
 
-
-  componentDidMount() {
-      window.addEventListener("resize", this.resizeCanvas.bind(this));
-  }
-
-
+  //update on resize canvas
   resizeCanvas() {
-    this.setState({ width: window.innerWidth , height: window.innerHeight});
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
 
@@ -45,7 +65,7 @@ class Main extends Component {
           content={this.props.content.images}
           onSelectImage={this.onSelectImageHandler}
         />
-        <div style={{  position: "fixed" , marginTop:"-3.5em"}}>
+        <div style={{ position: "absolute", top: "0px", overflow: "hidden" }}>
           <Depth360Viewer image={this.state.image} depthImage={this.state.depthImage} width={this.state.width} height={this.state.height} />
         </div>
       </div>
