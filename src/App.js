@@ -1,7 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import React, { Component } from "react";
-
 import MenuTop from './components/MenuTop';
 import Depth360Viewer from './components/Depth3DViewer';
 

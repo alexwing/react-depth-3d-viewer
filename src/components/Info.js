@@ -3,8 +3,9 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Table from 'react-bootstrap/Table';
 
-import { getUrl, } from '../lib/Utils.js';
+//import { getUrl, } from '../lib/Utils.js';
 import './Info.css';
 import {
     FacebookShareButton, FacebookIcon,
@@ -35,12 +36,30 @@ export default class Info extends Component {
             });
             InfoClose();
         }
-        let url = "http://" + getUrl() +"/Depth3DViewer";
-        let quote = ""
+        let url = "http://mappuzzle.xyz/depth3dviewer/";
+        let quote = "Pseudo 3D photo viewer from a depth layer for React using pixi.js"
         let hashtag = "3d,depth"
         let title = "Depth3DViewer"
 
-
+        const Puzzles = (
+            <Table striped bordered size="sm" className="legendInfo">
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Credits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.props.content.map(c =>
+                    (
+                        <tr key={c.id} id={c.id}>
+                            <td width="30%">{c.name}</td>
+                            <td width="50%">{c.comment}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </Table>
+        );
         return <div>
             <Modal
                 show={this.state.show}
@@ -57,15 +76,12 @@ export default class Info extends Component {
                 <Modal.Body>
                     <Row>
                         <Col lg={12} className="info">
-                            <p>Depth3DViewer test app</p>
                             <h2>Description</h2>
-                            <p>ssss</p>
-                            <h2>Process:</h2>
-                            <ul>
-                                <li>item 1</li>
-                                
-                            </ul>
-                            Sourcecode in <a href="https://github.com/alexwing/" rel="noreferrer nofollow" target="_BLANK">Github</a> 
+                            <p>Pseudo 3D photo viewer from a depth layer for React using pixi.js</p>
+                            <p>In 3D computer graphics and computer vision, a depth map is an image or image channel that contains information relating to the distance of the surfaces of scene objects from a viewpoint. The depth map applied to a texture as a displacement filter can achieve a 3d effect, other implementations such as Facebook also allow interpolation of the non visible areas of the texture when moving in 3D.</p>
+                            <h2>Credits</h2>
+                            {Puzzles}
+                            Sourcecode in <a href="https://github.com/alexwing/react-depth-3d-viewer/" rel="noreferrer nofollow" target="_BLANK">Github</a> 
                         </Col>
                     </Row>
                     <Row>
@@ -80,7 +96,7 @@ export default class Info extends Component {
                             <TwitterShareButton url={url} title={quote} hashtags={hashtag.split(',')}>
                                 <TwitterIcon size={48} round={true} />
                             </TwitterShareButton>
-                            <LinkedinShareButton url={url} title={title + " - " + this.props.name} summary={quote} source={title}>
+                            <LinkedinShareButton url={url} title={title} summary={quote} source={title}>
                                 <LinkedinIcon size={48} round={true} />
                             </LinkedinShareButton>
                             <WhatsappShareButton url={url} title={quote} >

@@ -3,29 +3,21 @@
     {
       "id": 0,
       "name": "Alhambra",
-      "comment": "Alhambra de Granada",
-      "url": "test_08",
+      "comment": "Alhambra de Granada From https://flic.kr/p/prYECU",
+      "url": "alhambra",
       "image": "./images/test08.jpg",
       "depthImage": "./images/test08_depth.jpg"         
     },
     {
       "id": 1,
-      "name": "Test 02",
-      "comment": "Test 02",
-      "url": "test_02",
-      "image": "./images/test02.jpg",
-      "depthImage": "./images/test02_depth.jpg"     
-    },
-    {
-      "id": 2,
-      "name": "Test 03",
-      "comment": "Test 03",
-      "url": "test_03",
+      "name": "Test Cube",
+      "comment": "Test Cube from https://en.wikipedia.org/wiki/Depth_map",
+      "url": "testcube",
       "image": "./images/test03.jpg",
       "depthImage": "./images/test03_depth.jpg"     
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Test 04",
       "comment": "Test 04",
       "url": "test_04",
@@ -33,7 +25,7 @@
       "depthImage": "./images/test04_depth.jpg"     
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Test 05",
       "comment": "Test 05",
       "url": "test_05",
@@ -41,7 +33,7 @@
       "depthImage": "./images/test05_depth.jpg"     
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Test 06",
       "comment": "Test 06",
       "url": "test_06",
@@ -49,7 +41,7 @@
       "depthImage": "./images/test06_depth.jpg"     
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "Test 07",
       "comment": "Test 07",
       "url": "test_07",
@@ -57,18 +49,10 @@
       "depthImage": "./images/test07_depth.jpg"     
     },
     {
-      "id": 7,
-      "name": "Test 01",
-      "comment": "Test 01",
-      "url": "test_01",
-      "image": "./images/test01.jpg",
-      "depthImage": "./images/test01_depth.jpg"    
-    },
-    {
-      "id": 8,
+      "id": 6,
       "name": "Torre del Oro",
       "comment": "Torre del Oro (Sevilla)",
-      "url": "test_09",
+      "url": "torredeloro",
       "image": "./images/test09.jpg",
       "depthImage": "./images/test09_depth.jpg"     
     }

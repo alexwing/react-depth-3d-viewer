@@ -17,6 +17,7 @@ Test in http://mappuzzle.xyz/depth3dviewer/
 * Respect aspect ratio on autofit image to canvas 
 * Update on canvas resize
 * Mobile touch events
+* Select image from url parameters
 
 ## TO-DO
 
