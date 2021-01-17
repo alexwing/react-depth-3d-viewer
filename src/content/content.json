@@ -6,7 +6,7 @@
       "comment": "Alhambra de Granada From https://flic.kr/p/prYECU",
       "url": "alhambra",
       "image": "./images/test08.jpg",
-      "depthImage": "./images/test08_depth.jpg"         
+      "depthImage": "./images/test08_depth.jpg"
     },
     {
       "id": 1,
@@ -14,7 +14,7 @@
       "comment": "Test Cube from https://en.wikipedia.org/wiki/Depth_map",
       "url": "testcube",
       "image": "./images/test03.jpg",
-      "depthImage": "./images/test03_depth.jpg"     
+      "depthImage": "./images/test03_depth.jpg"
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "comment": "Test 04",
       "url": "test_04",
       "image": "./images/test04.jpg",
-      "depthImage": "./images/test04_depth.jpg"     
+      "depthImage": "./images/test04_depth.jpg"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "comment": "Test 05",
       "url": "test_05",
       "image": "./images/test05.jpg",
-      "depthImage": "./images/test05_depth.jpg"     
+      "depthImage": "./images/test05_depth.jpg"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "comment": "Test 06",
       "url": "test_06",
       "image": "./images/test06.jpg",
-      "depthImage": "./images/test06_depth.jpg"     
+      "depthImage": "./images/test06_depth.jpg"
     },
     {
       "id": 5,
@@ -46,7 +46,7 @@
       "comment": "Test 07",
       "url": "test_07",
       "image": "./images/test07.jpg",
-      "depthImage": "./images/test07_depth.jpg"     
+      "depthImage": "./images/test07_depth.jpg"
     },
     {
       "id": 6,
@@ -54,7 +54,16 @@
       "comment": "Torre del Oro (Sevilla)",
       "url": "torredeloro",
       "image": "./images/test09.jpg",
-      "depthImage": "./images/test09_depth.jpg"     
+      "depthImage": "./images/test09_depth.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Montains",
+      "comment": "Montains from https://assetstore.unity.com/packages/3d/environments/landscapes/free-background-mountain-157924",
+      "url": "montains",
+      "image": "./images/test10.jpg",
+      "depthImage": "./images/test10_depth.jpg"
     }
+    
   ]
 }
