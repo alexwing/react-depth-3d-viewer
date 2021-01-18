@@ -19,7 +19,7 @@
     {
       "id": 2,
       "name": "Test 04",
-      "comment": "Test 04",
+      "comment": "Test 04 https://tympanus.net/codrops/2019/02/20/how-to-create-a-fake-3d-image-effect-with-webgl/",
       "url": "test_04",
       "image": "./images/test04.jpg",
       "depthImage": "./images/test04_depth.jpg"
@@ -27,7 +27,7 @@
     {
       "id": 3,
       "name": "Test 05",
-      "comment": "Test 05",
+      "comment": "Test 05 https://tympanus.net/codrops/2019/02/20/how-to-create-a-fake-3d-image-effect-with-webgl/",
       "url": "test_05",
       "image": "./images/test05.jpg",
       "depthImage": "./images/test05_depth.jpg"
@@ -35,7 +35,7 @@
     {
       "id": 4,
       "name": "Test 06",
-      "comment": "Test 06",
+      "comment": "Test 06 https://tympanus.net/codrops/2019/02/20/how-to-create-a-fake-3d-image-effect-with-webgl/",
       "url": "test_06",
       "image": "./images/test06.jpg",
       "depthImage": "./images/test06_depth.jpg"
@@ -43,7 +43,7 @@
     {
       "id": 5,
       "name": "Test 07",
-      "comment": "Test 07",
+      "comment": "Test 07 https://tympanus.net/codrops/2019/02/20/how-to-create-a-fake-3d-image-effect-with-webgl/",
       "url": "test_07",
       "image": "./images/test07.jpg",
       "depthImage": "./images/test07_depth.jpg"
@@ -63,7 +63,22 @@
       "url": "montains",
       "image": "./images/test10.jpg",
       "depthImage": "./images/test10_depth.jpg"
-    }
-    
+    },
+    {
+      "id": 8,
+      "name": "Model",
+      "comment": "Model from https://renderpeople.com/free-3d-people/",
+      "url": "model",
+      "image": "./images/corgi.png",
+      "depthImage": "./images/corgi_depth.png"
+    },
+    {
+      "id": 9,
+      "name": "Pickle Cat",
+      "comment": "Model from https://www.alanzucconi.com/2019/01/01/parallax-shader/",
+      "url": "model",
+      "image": "./images/pickle_cat.png",
+      "depthImage": "./images/picke_cat_depth.jpg"
+    }    
   ]
 }
