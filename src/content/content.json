@@ -79,6 +79,14 @@
       "url": "model",
       "image": "./images/pickle_cat.png",
       "depthImage": "./images/picke_cat_depth.jpg"
-    }    
+    },  
+    {
+      "id": 10,
+      "name": "Circular Lines",
+      "comment": "Circular Lines from https://www.facebook.com/photo?fbid=10159963571103539",
+      "url": "circularlines",
+      "image": "./images/test11.jpg",
+      "depthImage": "./images/test11_depth.jpg"
+    }      
   ]
 }

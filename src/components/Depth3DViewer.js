@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 //import { isMobile } from 'react-device-detect';
 import { Stage, PixiComponent } from '@inlet/react-pixi';
-import { Graphics, Sprite, filters, Texture, BaseTexture  } from 'pixi.js';
+import { Graphics, Sprite, Texture, BaseTexture  } from 'pixi.js';
 import { AspectRatio } from "./../lib/Utils.js"
+import { DisplacementFilter } from '../lib/custom-filter-displacement.js';
 
 
 export default class Depth3DViewer extends Component {
@@ -52,7 +53,7 @@ export default class Depth3DViewer extends Component {
 
             FitToScreen(width, height);
 
-            let displacementFilter = new filters.DisplacementFilter(depthMap, 0);
+            let displacementFilter = new DisplacementFilter(depthMap, 0);
             //displacementFilter. blendMode  = BLEND_MODES.DIFFERENCE;
             displacementFilter.resolution   = 2;
             instance.filters = [displacementFilter];
