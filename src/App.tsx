@@ -4,14 +4,14 @@ import MenuTop from './components/MenuTop';
 import Depth360Viewer from './components/Depth3DViewer';
 
 
-class Main extends Component {
-  constructor(props) {
+class Main extends Component<any, any> {
+  constructor(props: any) {
     super(props);
 
-    let selected = 0;
+    let selected:number = 0;
     //if get url param
     if (window.location.pathname) {
-      this.props.content.images.forEach(function (value, index) {
+      this.props.content.images.forEach(function (value:any, index:number) {
         if (value.url === window.location.search.substr(5)) {
           selected = index;
         }
@@ -31,7 +31,7 @@ class Main extends Component {
     window.addEventListener("resize", this.resizeCanvas.bind(this));
   }
 
-  onSelectImageHandler = (val) => {
+  onSelectImageHandler = (val:any ) => {
     if (val.target.id) {
       this.setState({
         puzzleSelected: val.target.id,

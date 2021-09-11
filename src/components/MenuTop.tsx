@@ -5,10 +5,11 @@ import Button from 'react-bootstrap/Button';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom'
-import Info from './Info.js';
+import Info from './Info';
+import { Depht3DProp } from '../lib/Interfaces';
 
-export default class MenuTop extends Component {
-  constructor(props) {
+export default class MenuTop extends Component<any, any> {
+  constructor(props:any) {
     super(props)
     this.state = {
       showInfo: false,
@@ -31,9 +32,9 @@ export default class MenuTop extends Component {
     const Images = (
       <Nav className="mr-auto">
         <NavDropdown title="Select a Image" id="puzzle">
-          {this.props.content.map(c =>
+          {this.props.content.map((c: Depht3DProp) =>
           (
-              <NavDropdown.Item as={Link} id={c.id} key={c.id} to={"./?img=" + c.url} onClick={onSelectImage} exact>
+              <NavDropdown.Item as={Link} id={c.id} key={c.id} to={"./?img=" + c.url} onClick={onSelectImage}>
                 {c.name}
               </NavDropdown.Item>
           ))}

@@ -79,7 +79,7 @@
       "url": "model",
       "image": "./images/pickle_cat.png",
       "depthImage": "./images/picke_cat_depth.jpg"
-    },  
+    },
     {
       "id": 10,
       "name": "Circular Lines",
@@ -87,6 +87,30 @@
       "url": "circularlines",
       "image": "./images/test11.jpg",
       "depthImage": "./images/test11_depth.jpg"
-    }      
+    },
+    {
+      "id": 11,
+      "name": "Moon",
+      "comment": "Moon from https://www.zmescience.com/other/art-other/nasa-map-artists-07102019/",
+      "url": "Moon",
+      "image": "./images/test12.jpg",
+      "depthImage": "./images/test12_depth.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Launching of a ship",
+      "comment": "Botadura el 19 de Noviembre de 1960. del que fuera, en su momento, el mayor buque de carga seca construido en España; Minas Conjuro, de 180 metros de eslora por 22,5 metros de manga y 21.300 tns de capacidad. Fotógrafo: desconocido. Fuente: La Antigua Sevilla",
+      "url": "Launching",
+      "image": "./images/test13.jpg",
+      "depthImage": "./images/test13_depth.png"
+    },    
+    {
+      "id": 13,
+      "name": "Ava Gardner",
+      "comment": "Ava Gardner en Sevilla. Año 1950",
+      "url": "AvaGardner",
+      "image": "./images/test14.jpg",
+      "depthImage": "./images/test14_depth.png"
+    }
   ]
 }

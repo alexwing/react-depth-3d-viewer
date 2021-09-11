@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 //import { isMobile } from 'react-device-detect';
 import { Stage, PixiComponent } from '@inlet/react-pixi';
-import { Graphics, Sprite, Texture, BaseTexture  } from 'pixi.js';
-import { AspectRatio } from "./../lib/Utils.js"
-import { DisplacementFilter } from '../lib/custom-filter-displacement.js';
+import { Graphics, Sprite, Texture, BaseTexture,filters  } from 'pixi.js';
+import { AspectRatio } from "../lib/Utils"
+;
 
-
-export default class Depth3DViewer extends Component {
+export default class Depth3DViewer extends Component<any, any> {
     render() {
-        var img;
-        var depthMap;
+        var img: Sprite;
+        var depthMap: Sprite;
         const Depth3D = PixiComponent('Rectangle', {
             create: props => new Graphics(),
             applyProps: (instance, _, props) => {
-                const { image, depthImage, x, y, width, height } = props;
+                const { image, depthImage, x, y, width, height } = this.props;
                 let imageTexture = new BaseTexture(image);
                 let depthImageTexture = new BaseTexture(depthImage);
                 //loaders
@@ -35,7 +34,7 @@ export default class Depth3DViewer extends Component {
             },
         });
 
-        function CreateDepth3D(instance, imageTexture, depthImageTexture, x, y, width, height) {
+        function CreateDepth3D(instance:any, imageTexture:BaseTexture, depthImageTexture:BaseTexture, x:number, y:number, width:number, height:number) {
             //Only create if two images has loaded
             if (!imageTexture.valid || !depthImageTexture.valid) {
                 return;
@@ -48,12 +47,12 @@ export default class Depth3DViewer extends Component {
                 instance.removeChild(img)
             }
 
-            img = new Sprite.from(new Texture(imageTexture));
-            depthMap = new Sprite.from(new Texture(depthImageTexture));
+            img =  Sprite.from(new Texture(imageTexture));
+            depthMap = Sprite.from(new Texture(depthImageTexture));
 
             FitToScreen(width, height);
 
-            let displacementFilter = new DisplacementFilter(depthMap, 0);
+            let displacementFilter:any =  new filters.DisplacementFilter(depthMap, 0);
             //displacementFilter. blendMode  = BLEND_MODES.DIFFERENCE;
             displacementFilter.resolution   = 2;
             instance.filters = [displacementFilter];
@@ -65,7 +64,7 @@ export default class Depth3DViewer extends Component {
             //img.hitArea = new Rectangle(img.x, img.y, img.width, img.height);
             img.interactive = true;
             //img.buttonMode = true;
-            img.on('pointermove', function (e) {
+            img.on('pointermove', function (e:any) {
                 displacementFilter.scale.x = (img.width / 2 - e.data.global.x) / 25;
                 displacementFilter.scale.y = (img.height / 2 - e.data.global.y) / 25;
             });
@@ -74,7 +73,7 @@ export default class Depth3DViewer extends Component {
 
         }
 
-        function FitToScreen(width, height) {
+        function FitToScreen(width:number, height:number) {
             console.log(AspectRatio(img.width, img.height) + "- " + AspectRatio(width, height) + " - " + window.devicePixelRatio);
             if (AspectRatio(width, height) >= AspectRatio(img.width, img.height)) {
                 //console.log("Horizontal");
@@ -106,8 +105,8 @@ export default class Depth3DViewer extends Component {
             }
         }
 
-        return <Stage width={this.props.width} height={this.props.height} options={{ resolution: 1 , RETINA_PREFIX: `@2x` }} >
-            <Depth3D image={this.props.image} depthImage={this.props.depthImage} x={this.props.x ? this.props.x : 0} y={this.props.y ? this.props.y : 0} width={this.props.width} height={this.props.height} />
+        return <Stage width={this.props.width} height={this.props.height} options={{ resolution: 1  }} >
+            <Depth3D image={this.props.image} depthImage={this.props.depthImage} x={this.props.x ? this.props.x : 0} y={this.props.y ? this.props.y : 0} width={this.props.width} height={this.props.height}  {...(this.props as any)}/>
         </Stage>
     }
 

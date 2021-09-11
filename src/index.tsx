@@ -7,7 +7,7 @@ import content from './content/content.json';
 import { BrowserRouter as Router } from "react-router-dom";
 
 export const history = createBrowserHistory({
-  basename: process.env.PUBLIC_URL
+//  basename: process.env.PUBLIC_URL
 });
 
 

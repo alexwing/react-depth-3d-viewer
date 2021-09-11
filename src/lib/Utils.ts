@@ -9,7 +9,7 @@ export function getUrl() {
 }
 
 
-export function AspectRatio(width, height) {
+export function AspectRatio(width:number, height:number) {
   let aspectRatioImage = width / height;
-  return aspectRatioImage ? aspectRatioImage : null;
+  return aspectRatioImage ? aspectRatioImage : 0;
 }
